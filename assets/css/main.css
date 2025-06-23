@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: FilsonSoftRegular;
+  font-style: normal;
+  font-weight: 200 400;
+  font-display: swap;
+  src: url('../fonts/FILSONSOFTREGULAR.OTF') format('opentype');
+}
+
+@font-face {
+  font-family: FilsonSoftBold;
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('../fonts/FILSONSOFT-BOLD.OTF') format('opentype');
+}
+
+@layer base {
+  body {
+    @apply font-filson-regular;
+  }
+
+  .no-user-select {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  .synt-group-field {
+    @apply grid grid-cols-1 gap-0 md:gap-3 md:grid-cols-4;
+  }
+  .synt-col-span-3 {
+    @apply col-span-3;
+  }
+
+}
